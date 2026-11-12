@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCore - Build Your Own PC With Us</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- CSS Components -->
+    <link rel="stylesheet" href="./css/components/genericButton.css">
+    <link rel="stylesheet" href="./css/components/tooltip.css">
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- NavBar -->
+    <header>
+        <nav>
+            <div class="leftHeader">
+                <button type="button" class="showCategories genericToolTip" id="genericButton" aria-expanded="false" aria-controls="hiddenMenu" aria-label="Mostrar Categorías" data-tooltip="Categorías">
+                    <img src="./images/svg/hamburger.svg" alt="">
+                </button>
+                <div id="hiddenMenu">
+                    <button type="button" class="closeMenu" id="genericButton" aria-label="Salir del menu desplegable">
+                        <img src="./images/svg/exit.svg" alt="">
+                    </button>
+                    <ul>
+                        <li><a href="#">Almacenamiento</a></li>
+                        <li><a href="#">Ratones</a></li>
+                        <li><a href="#">Auriculares</a></li>
+                        <li><a href="#">Impresoras</a></li>
+                        <li><a href="#">Sillas</a></li>
+                        <li><a href="#">Teclados</a></li>
+                        <li><a href="#">Criptominería</a></li>
+                        <li><a href="#">PC Sobremesa</a></li>
+                    </ul>
+                </div>
+                <a href="./" class="logo" aria-label="CyberCore - Inicio">
+                    <img src="./images/logo/logo.svg" alt="">
+                    <p>CyberCore</p>
+                </a>
+            </div>
+            <div class="rightHeader">
+                <ul>
+                    <li>
+                        <a href="#" class="userAccount genericToolTip" aria-label="Cuenta del Usuario" data-tooltip="Mi Cuenta">
+                            <img src="./images/svg/user.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="shoppingCart genericToolTip" aria-label="Carrito de compras" data-tooltip="Ver Carrito">
+                            <img src="./images/svg/shopping-cart.svg" alt="">
+                            <span class="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <!-- <div class="hero">
+        <div class="hero_content">
+            <img src="./images/gamer-con-pc-gamer.webp" alt="Gamer disfrutando de su nueva PC Gamer">
+            <div class="heroHeader">
+                <h1><strong>CONSTRUYE TU PC</strong> CON AYUDA DE PROFESIONALES</h1>
+                <h2>Si siempre haz deseado tener una PC Gamer ¡Ahora es tu momento!</h2>
+                <a href="#">Armar PC</a>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
