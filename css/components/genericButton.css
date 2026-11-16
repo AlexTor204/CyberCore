@@ -1,4 +1,4 @@
-#genericButton {
+.genericButton {
     display: inline-block;
     border: none;
     background-color: var(--white);

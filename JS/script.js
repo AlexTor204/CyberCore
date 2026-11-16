@@ -3,6 +3,12 @@ const hiddenMenu = document.querySelector("#hiddenMenu");
 const closeMenu = document.querySelector(".closeMenu");
 const firstCategory = hiddenMenu.querySelector("ul li a");
 
+
+function fCloseMenu() {
+    hiddenMenu.classList.remove("visibleMenu");
+    showCategories.setAttribute("aria-expanded", "false");
+}
+
 showCategories.addEventListener("click", () => {
     const isOpen = hiddenMenu.classList.toggle("visibleMenu");
     
@@ -17,18 +23,14 @@ showCategories.addEventListener("click", () => {
 document.addEventListener("click", (event) => {
     if(hiddenMenu.classList.contains("visibleMenu")) {
         if(!hiddenMenu.contains(event.target) && !showCategories.contains(event.target)) {
-            hiddenMenu.classList.remove("visibleMenu");
-            showCategories.setAttribute("aria-expanded", "false");
+            fCloseMenu();
         }
     }
 })
 
 // Cerrar al hacer click en closeMenu
 closeMenu.addEventListener("click", () => {
-    hiddenMenu.classList.remove("visibleMenu");
-
-    showCategories.setAttribute("aria-expanded", "false");
-
+    fCloseMenu();
     showCategories.focus();
 })
 
@@ -38,8 +40,7 @@ closeMenu.addEventListener("click", () => {
 document.addEventListener("keydown", (event) => {
     if(hiddenMenu.classList.contains("visibleMenu")) {
         if(event.key === "Escape") {
-            hiddenMenu.classList.remove("visibleMenu");
-            showCategories.setAttribute("aria-expanded", "false");
+            fCloseMenu();
             showCategories.focus();
         }
     }
