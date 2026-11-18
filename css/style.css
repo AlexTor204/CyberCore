@@ -441,6 +441,7 @@ main {
     margin-top: 5rem;
     
     background-color: var(--bg);
+    color: var(--text);
 
     h2 {
         text-align: center;
@@ -500,6 +501,106 @@ main {
     }
 }
 
+/* FAQ */
+.faq {
+    margin-top: 5rem;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    
+    color: var(--text);
+
+    h2 {
+        font-size: 2rem;
+        span {
+            color: var(--textHighlight);
+        }
+    }
+    .faq_container {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        padding: 1rem;
+
+        width: 100%;
+        max-width: 50rem;
+
+        details {
+            display: flex;
+            flex-flow: column nowrap;
+
+            border-radius: 3rem;
+            padding: 1rem;       
+            
+            font-size: 1.4rem;
+            background-color: #ebebeb;
+            
+            summary {
+                position: relative;
+                list-style: none;
+                cursor: pointer;   
+
+                padding-left: 20px;
+
+                &::before {
+                    content: "";
+                    background-image: url("../images/svg/plus.svg");
+                    position: absolute;
+
+                    width: 13px;
+                    height: 13px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    font-size: 1.7rem;
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+
+            p {
+                color: #4d4d4d;
+            }
+            
+            &[open] {
+                border-radius: 1rem 1rem 0rem 0rem;
+                gap: 1rem;
+
+                summary {
+                    &::before {
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                }
+            }
+            /* Accesibilidad */
+            &:has(summary:focus-visible) {
+                outline: 2px dashed var(--black);
+                outline-offset: 4px;
+            }
+        }
+    }
+}
+/* FAQ Desktop */
+@media (min-width: 850px) {
+    .faq {
+        flex-flow: row nowrap;
+        justify-content: center;
+        h2 {
+            align-self: flex-start;
+            font-size: 2rem;
+            /* width: min-content; */
+        }
+        
+    }
+    
+}
 /* Usuarios que prefieran no tener animaciones */
 @media (prefers-reduced-motion: reduce) {
     *, *::after, *::before {
