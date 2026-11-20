@@ -601,6 +601,128 @@ main {
     }
     
 }
+
+/* Footer */
+footer {
+    margin-top: 5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    .footerContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 1rem;
+        gap: 4rem;
+
+        .footerHeader a{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 0.3rem;
+
+            width: fit-content;
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+
+            img {
+                width: 3.5rem;
+                object-fit: cover;
+            }
+
+            p {
+                display: block;
+            }
+
+            /* Accesibilidad */
+            &:focus-visible {
+                border-radius: 3rem;
+                outline: 2px dashed var(--white);
+                outline-offset: 5px;
+            }
+        }
+
+        .footerMain {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 30rem));
+            row-gap: 4rem;
+
+            font-size: clamp(1rem, 5vw, 1.5rem);
+
+            nav, section {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 1rem;
+
+                h3 {
+                    font-size: clamp(1.6rem, 5vw, 1.8rem);
+                }
+            }
+
+            nav ul {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 1rem;
+
+                li a {
+                    text-decoration: none;
+                    color: var(--white);
+
+                    /* Accesibilidad */
+                    &:hover, &:focus-visible {
+                        text-decoration: underline;
+                        
+                    }
+                }
+            }
+
+            .contact {
+                address {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    gap: 1rem;
+                    color: #c7c7c7;
+                    img {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        object-fit: cover;
+                    }
+                }
+
+                .online {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    overflow-wrap: anywhere;
+                    align-items: center;
+                    gap: 1rem;
+
+                    img {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        object-fit: cover;
+                    }
+
+                    a {
+                        color: #c7c7c7;
+                        text-decoration: none;
+
+                        /* Accesibilidad */
+                        &:hover, &:focus-visible {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerBottom {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            font-size: 1.2rem;
+        }
+    }
+}
 /* Usuarios que prefieran no tener animaciones */
 @media (prefers-reduced-motion: reduce) {
     *, *::after, *::before {
